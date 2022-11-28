@@ -34,8 +34,6 @@ pass
 
 
 # Separating the dependent and independent data variables into two data frames.
-from sklearn.model_selection import train_test_split
-
 X = data.drop(['type'], axis=1)
 Y = data['type']
 
@@ -43,10 +41,15 @@ Y = data['type']
 X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=.20, random_state=0)
 
 def mape(y_actual, y_predicted):
-    return np.mean(np.abs((Y_actual - Y_Predicted)/Y_actual))*100
+    return np.mean(np.abs((y_actual - y_predicted)/y_actual))*100
 
 # Building the KNN Model on our dataset
-from sklearn.neighbors import KNeighborsRegressor
 KNN_model = KNeighborsRegressor(n_neighbors=3).fit(X_train,Y_train)
 # Prediction
 KNN_predict = KNN_model.predict(X_test) #Predictions on Testing data
+
+# Using MAPE error metrics to check for the error rate and accuracy level
+KNN_MAPE = mape(Y_test,KNN_predict)
+Accuracy_KNN = 100 - KNN_MAPE
+print("MAPE: ",KNN_MAPE)
+print('Accuracy of KNN model: {:0.2f}%.'.format(Accuracy_KNN))
