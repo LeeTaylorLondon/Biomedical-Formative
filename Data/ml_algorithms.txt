@@ -1,0 +1,9 @@
+support vector machine
+random forest
+gradient boosted trees
+stacking and volting
+
+classification
+logistic regression
+nearest neighbours
+decision tree

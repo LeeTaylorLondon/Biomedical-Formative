@@ -1,0 +1,23 @@
+M. Charytanowicz et al.
+"Complete gradient clustering algorithm for features analysis of X-ray images"
+Information Technologies in Biomedicine 2:15-24, 2010
+DOI: 10.1007/978-3-642-13105-9_2
+
+The kernel, sometimes called the wheat berry, is the seed from which the
+wheat plant grows. About 80% of the kernel weight is the endosperm that
+is the source of white flour.
+
+The dataset describes kernels of three different varieties of wheat:
+Kama (1), Rosa (2) and Canadian (3); 70 elements each, randomly selected for
+the experiment. The internal kernel structure was visualised using a soft
+X-ray technique. Measurements of geometrical properties of kernels were
+made using the GRAINS package.
+
+Attribute description:
+- area (A)
+- perimeter (P)
+- compactness - C = 4*pi*A/P^2
+- kernel length
+- kernel width
+- asymmetry coefficient
+- length of kernel groove
